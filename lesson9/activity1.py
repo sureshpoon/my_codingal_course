@@ -1,12 +1,12 @@
-a = 13
-if a ==13 :
-    if a < 15:
-        print (f"{a} is smaller than fifteen")
-    if a > 10 :
-        print (f"{a} is greater than 10")
-    else :
-        print ("invalid input")
+medical_cause= input("Do you have any medical cause? (Y/N): ")
+attendance = int (input ("What is your attendance? "))
+if medical_cause =="Y":
+    print ("You are allowed")
 
-else : 
-    print ("invalid input")                        
+else:
+    if attendance>= 75:
+        print ("you are allowed")
+    else :
+        print ("you are not allowed")        
+
 
