@@ -1,0 +1,13 @@
+import turtle
+turtle.Screen().bgcolor("teal")
+sq= turtle.Turtle()
+sides= int (input("enter the length of the sides of the square :  "))
+sq.forward(sides)
+sq.left(90)
+sq.forward(sides)
+sq.left(90)
+sq.forward(sides)
+sq.left(90)
+sq.forward(sides)
+sq.left(90)
+turtle.done()
