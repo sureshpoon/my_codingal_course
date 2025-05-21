@@ -2,9 +2,9 @@ import re, random
 from colorama import Fore, init
 init (autoreset = True) 
 destinations = {
-    "Beaches" : ["Bali", "Maldives", "Phuket"],
-    "Mountains" : ["Swiss alps", "Rocky mountains", "Himalayas"],
-    "Cities" : ["Tokyo", "Paris", "New york"]
+    "beaches" : ["Bali", "Maldives", "Phuket"],
+    "mountains" : ["Swiss alps", "Rocky mountains", "Himalayas"],
+    "cities" : ["Tokyo", "Paris", "New york"]
 }
 jokes = [
     "Why dont programs like nature ? too many bugs",
@@ -12,7 +12,7 @@ jokes = [
     "Why do travellers always feel warm ? because of all their hot spots"
 ]
 def normalize_input(text):
-    return re.sub (r"\s +", " ", text.strip().lower())
+    return re.sub (r"\s+", " ", text.strip().lower())
 
 def recommend():
     print (Fore.CYAN + "Travel bot : Beaches, Mountains, Cities?")
