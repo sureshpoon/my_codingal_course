@@ -38,10 +38,10 @@ def player_move (board, symbol) :
             print ("Please enter a value between 1 and 9 ")
     board [move - 1]= symbol 
 
-def ai_move (board, ai_symbol, player_symbol) : 
+def ai_move (board, ai_symbol) : 
     for i in range (9) :
         if board [i].isdigit() :
-            board_copy = board.copy()
+            board_copy = board.copy() 
             board_copy [i]= ai_symbol
             if check_win (board_copy, ai_symbol): 
                 board[i] = ai_symbol 
@@ -51,7 +51,7 @@ def ai_move (board, ai_symbol, player_symbol) :
     board[move] = ai_symbol 
 
 def check_win (board, symbol) :
-    win_condition = [
+    win_condition = [ #tuples
         (0, 1, 2), (3, 4, 5), (6, 7, 8),
         (0, 3, 6), (1, 4, 7), (2, 5, 8),
         (0, 4, 8), (2, 4, 6)
@@ -88,7 +88,7 @@ def tic_tac_toe () :
                     else:
                         turn = "AI"
             else: 
-                ai_move (board, ai_symbol, player_symbol)
+                ai_move (board, ai_symbol)
                 if check_win (board, ai_symbol):
                     display_board(board)
                     print ("AI has won the game!")
